@@ -5,7 +5,7 @@
 **Tools:** SQL · Aggregate Functions · Window Functions · Subqueries
 **Dataset:** Sample Superstore — 9,994 transactions across product categories, customer segments, and U.S. regions
 
-Business-focused SQL analysis of retail sales and profitability, leveraging aggregation, ranking, subqueries, and window functions to identify revenue drivers, margin erosion, discount impacts, and geographic performance trends.
+Business-focused SQL analysis of retail sales and profitability, leveraging aggregation, ranking, subqueries, and window functions to identify revenue drivers, margin erosion, discount impacts, and geographic performance trends, culminating in a root-cause investigation of a $25K loss-making market.
 
 ---
 
@@ -71,11 +71,15 @@ While the business appears healthy at a high level, profitability varies signifi
 | Overall Profit Margin | 12.47% across $2.30M in sales |
 | Technology Margin | 17.40% — highest-performing category |
 | Furniture Margin | 2.49% despite generating over $742K in sales |
-| Texas Performance | -$25.7K profit on $170K revenue with a 37% average discount |
-| Discount Threshold | Profitability declines sharply beyond ~30% discount |
+| Segment Efficiency | Home Office leads on margin (14.03%) despite being the smallest segment by revenue |
+| Texas Performance | -$25.7K profit on $170K revenue; avg. 37% discount — a demand success and a pricing failure |
+| Loss State Pattern | Ohio, Pennsylvania, and Illinois collectively destroy $45K+ in profit despite strong revenue |
+| Discount Cliff | Margin turns negative above 20%; the 51–80% band operates at -119.20% margin, destroying $76.6K |
 | Revenue Concentration | Top 5 states account for 52% of total revenue |
-| Top Profit Sub-Category | Copiers generated $55.6K profit |
-| Largest Loss Driver | Tables generated -$17.7K profit |
+| Binders Exception | 37% avg discount, still $30.2K profit — pricing power matters more than discount level alone |
+| Machines Risk | 31% avg discount, $3.4K profit on $189K sales — one pricing decision from a loss |
+| Top Profit Sub-Category | Copiers at $55.6K profit — highest in the dataset without the highest sales |
+| Largest Loss Driver | Tables at -$17.7K — primary drag on Furniture's 2.49% margin |
 
 ---
 
@@ -87,21 +91,25 @@ While the business appears healthy at a high level, profitability varies signifi
 ### Category Performance
 ![Category Performance](Assets/screenshots/02_Category_Performance.png)
 
-### Texas Profitability Investigation
-![Texas Deep Dive](Assets/screenshots/10_Texas_Profitability_Investigation.png)
+### Sub-Category Discount Analysis
+![Sub-Category Discount Analysis](Assets/screenshots/13_Subcategory_Discount_Analysis.png)
+
+### Texas Category Breakdown
+![Texas Category Breakdown](Assets/screenshots/10A_Texas_Category_Breakdown.png)
 
 ---
 
 ## Business Impact
 
-This analysis revealed that profitability challenges are driven less by revenue generation and more by discounting practices and product mix decisions.
+This analysis revealed that profitability challenges are driven less by revenue generation and more by discounting practices and product mix decisions. Critically, the Binders finding shows that heavy discounting does not universally destroy value — it destroys value when applied to products that cannot sustain it. This shifts the recommendation from a simple discount cap to a product-aware pricing governance framework.
 
 Key opportunities identified include:
-- Strengthening discount governance, particularly above 30%
-- Improving Furniture category profitability
-- Expanding focus on high-margin product lines such as Copiers and Phones
-- Replicating successful practices observed in California and New York
-- Implementing state-level profitability monitoring to detect margin erosion early
+- Implementing product-aware discount governance — caps matter most for low-margin products like Tables and Machines, not uniformly across all lines
+- Separating Furniture's discount problem (Tables, Bookcases) from Supplies' cost structure problem — they require different fixes
+- Prioritizing Texas, Ohio, and Pennsylvania for targeted discount review — fastest path to measurable profit recovery
+- Expanding focus on high-margin, low-discount product lines such as Copiers, Accessories, and Paper
+- Investigating the Home Office segment's margin efficiency as a model for improving Consumer segment performance
+- Replicating California and New York pricing practices in underperforming markets
 
 ---
 
