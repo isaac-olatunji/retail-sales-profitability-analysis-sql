@@ -111,6 +111,8 @@ Key opportunities identified include:
 - Investigating the Home Office segment's margin efficiency as a model for improving Consumer segment performance
 - Replicating California and New York pricing practices in underperforming markets
 
+> *"Profit isn't lost at the revenue line. It's lost at the discount approval."*
+
 ---
 
 ## Repository Structure
