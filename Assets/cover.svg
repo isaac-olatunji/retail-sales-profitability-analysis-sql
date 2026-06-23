@@ -1,0 +1,63 @@
+<svg viewBox="0 0 1600 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1628"/>
+      <stop offset="100%" stop-color="#0D1F3C"/>
+    </linearGradient>
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3DDC97"/>
+      <stop offset="100%" stop-color="#2E9E7A"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1A2C4D" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="500" fill="url(#bg)"/>
+  <rect width="1600" height="500" fill="url(#grid)" opacity="0.35"/>
+
+  <!-- Signature element: a SQL query block rendered as architecture, fading right -->
+  <g opacity="0.16" font-family="'Courier New', monospace" font-size="20" fill="#3DDC97">
+    <text x="980" y="80">SELECT state,</text>
+    <text x="1000" y="110">SUM(profit) AS total_profit,</text>
+    <text x="1000" y="140">RANK() OVER (</text>
+    <text x="1020" y="170">ORDER BY SUM(profit) DESC</text>
+    <text x="1000" y="200">) AS profit_rank</text>
+    <text x="980" y="230">FROM orders</text>
+    <text x="980" y="260">GROUP BY state;</text>
+  </g>
+
+  <!-- Top accent line -->
+  <rect x="100" y="100" width="120" height="4" fill="url(#accentLine)"/>
+
+  <!-- Eyebrow -->
+  <text x="100" y="80" font-family="'Courier New', monospace" font-size="18" fill="#3DDC97" letter-spacing="3">SQL · BUSINESS INTELLIGENCE</text>
+
+  <!-- Main title -->
+  <text x="100" y="175" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="#F4F6FA">Retail Sales Performance</text>
+  <text x="100" y="235" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="#F4F6FA">and Profitability Analysis</text>
+  <text x="100" y="280" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="400" fill="#8DA3C4" font-style="italic">Using SQL</text>
+
+  <!-- Subtitle -->
+  <text x="100" y="315" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#8DA3C4">Root-cause investigation of margin erosion across states, categories, and discount behavior</text>
+
+  <!-- Bottom metrics strip -->
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="100" y="400" font-size="34" font-weight="700" fill="#3DDC97">9,994</text>
+    <text x="100" y="425" font-size="15" fill="#6B85AC" letter-spacing="1">TRANSACTIONS ANALYZED</text>
+
+    <text x="330" y="400" font-size="34" font-weight="700" fill="#3DDC97">12.47%</text>
+    <text x="330" y="425" font-size="15" fill="#6B85AC" letter-spacing="1">OVERALL PROFIT MARGIN</text>
+
+    <text x="590" y="400" font-size="34" font-weight="700" fill="#3DDC97">-119%</text>
+    <text x="590" y="425" font-size="15" fill="#6B85AC" letter-spacing="1">MARGIN ON 51-80% DISCOUNTS</text>
+
+    <text x="850" y="400" font-size="34" font-weight="700" fill="#3DDC97">7</text>
+    <text x="850" y="425" font-size="15" fill="#6B85AC" letter-spacing="1">SQL SCRIPTS · WINDOW FUNCTIONS</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="100" y="465" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#4A6184">isaactheanalyst</text>
+  <circle cx="1480" cy="460" r="3" fill="#3DDC97"/>
+  <text x="1495" y="465" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#4A6184" text-anchor="start">Sample Superstore Dataset</text>
+</svg>
