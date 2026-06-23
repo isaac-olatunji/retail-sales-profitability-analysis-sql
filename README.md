@@ -164,7 +164,7 @@ Screenshots of SQL query outputs and analysis results are organised by section i
 
 For complete methodology, SQL query breakdowns, business insights, the Texas profitability investigation, and strategic recommendations:
 
-📖 **[View Full Analysis Report](SQL-Sales-Performance-Report.md)**
+📖 **[View Full Analysis Report](Analysis-Report/SQL-Sales-Performance-Report.md)**
 
 ---
 
