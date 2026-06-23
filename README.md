@@ -1,6 +1,6 @@
 # 📊 Retail Sales Performance and Profitability Analysis Using SQL
 
-![Cover](Assets/cover.svg)
+![Cover](Assets/sql-cover/cover.svg)
 
 **Tools:** SQL · Aggregate Functions · Window Functions · Subqueries
 **Dataset:** Sample Superstore — 9,994 transactions across product categories, customer segments, and U.S. regions
