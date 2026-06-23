@@ -73,7 +73,7 @@ While the business appears healthy at a high level, profitability varies signifi
 | Furniture Margin | 2.49% despite generating over $742K in sales |
 | Segment Efficiency | Home Office leads on margin (14.03%) despite being the smallest segment by revenue |
 | Texas Performance | -$25.7K profit on $170K revenue; avg. 37% discount — a demand success and a pricing failure |
-| Loss State Pattern | Ohio, Pennsylvania, and Illinois collectively destroy $45K+ in profit despite strong revenue |
+| Loss State Pattern | 10 states are loss-making; Ohio, Pennsylvania, and Illinois alone destroy $45K+ — Colorado and Tennessee run deeply negative margins even on small revenue |
 | Discount Cliff | Margin turns negative above 20%; the 51–80% band operates at -119.20% margin, destroying $76.6K |
 | Revenue Concentration | Top 5 states account for 52% of total revenue |
 | Binders Exception | 37% avg discount, still $30.2K profit — pricing power matters more than discount level alone |
@@ -86,16 +86,16 @@ While the business appears healthy at a high level, profitability varies signifi
 ## Results Preview
 
 ### Overall Business Performance
-![Overall Business Performance](Assets/screenshots/01_Overall_Business_Performance.png)
+![Overall Business Performance](Assets/screenshots/overall-business-perfromance/overall-business-performance.png)
 
 ### Category Performance
-![Category Performance](Assets/screenshots/02_Category_Performance.png)
+![Category Performance](Assets/screenshots/category-perfromance/category-performance.png)
 
 ### Sub-Category Discount Analysis
 ![Sub-Category Discount Analysis](Assets/screenshots/13_Subcategory_Discount_Analysis.png)
 
 ### Texas Category Breakdown
-![Texas Category Breakdown](Assets/screenshots/10A_Texas_Category_Breakdown.png)
+![Texas Category Breakdown](Assets/screenshots/deep-dive-texas/texas-category-breakdown.png)
 
 ---
 
@@ -155,7 +155,7 @@ Screenshots of SQL query outputs and analysis results are available in the **Ass
 
 For complete methodology, SQL query breakdowns, business insights, the Texas profitability investigation, and strategic recommendations:
 
-📖 **[View Full Analysis Report](./Analysis%20Report/SQL_Sales_Performance_Report.md)**
+📖 **[View Full Analysis Report](./Analysis%20Report/SQL-Sales-Performance-Report.md)**
 
 ---
 
