@@ -117,13 +117,13 @@ The analysis followed a structured SQL workflow:
 | Pennsylvania | $116,512 | -$15,560 |
 | Illinois | $80,166 | -$12,608 |
 | North Carolina | $55,603 | -$7,491 |
-| Colorado | — | -$6,528 |
-| Tennessee | — | -$5,342 |
-| Arizona | — | -$3,428 |
+| Colorado | $32,108 | -$6,528 |
+| Tennessee | $30,662 | -$5,342 |
+| Arizona | $35,282 | -$3,428 |
 | Florida | $89,474 | -$3,399 |
-| Oregon | — | -$1,190 |
+| Oregon | $17,431 | -$1,190 |
 
-**Insight:** Texas is the most critical issue — it is a top-3 revenue state generating the deepest losses in the dataset. The Sales column makes the problem sharper across all loss states: Ohio ($78K revenue, -$17K profit), Pennsylvania ($116K revenue, -$15.6K loss), and Illinois ($80K revenue, -$12.6K loss) all follow the same profile — meaningful revenue, net-negative returns. These are not small or marginal markets. They are mid-to-large revenue states where pricing execution is failing. The loss pattern across these four states alone accounts for over $70K in destroyed profit.
+**Insight:** Texas is the most critical issue — it is a top-3 revenue state generating the deepest losses in the dataset. The Sales column makes the problem sharper across all loss states: Ohio ($78K revenue, -$17K profit), Pennsylvania ($116K revenue, -$15.6K loss), and Illinois ($80K revenue, -$12.6K loss) all follow the same profile — meaningful revenue, net-negative returns. These are not small or marginal markets. They are mid-to-large revenue states where pricing execution is failing. The loss pattern across these four states alone accounts for over $70K in destroyed profit. Even smaller revenue states like Colorado ($32K sales, -$6.5K loss) and Tennessee ($30K sales, -$5.3K loss) are running deeply negative margins, suggesting the discount discipline problem extends well beyond the headline markets.
 
 ---
 
@@ -238,7 +238,9 @@ Window functions were used throughout the analysis to provide ranked and cumulat
 ### Revenue Concentration Analysis
 
 ![Revenue Concentration Analysis](Assets/screenshots/revenue-concentration-analysis/revenue-concentration-analysis.png)
+
 ![Revenue Concentration Analysis](Assets/screenshots/revenue-concentration-analysis/revenue-concentration-analysis2.png)
+
 ![Revenue Concentration Analysis](Assets/screenshots/revenue-concentration-analysis/revenue-concentration-analysis3.png)
 
 ```sql
@@ -269,6 +271,7 @@ ORDER BY total_sales DESC;
 ### State Profit Ranking
 
 ![State Profit Ranking](Assets/screenshots/dense-rank/state-profit-ranking-denserank.png)
+
 ![State Profit Ranking](Assets/screenshots/dense-rank/state-profit-ranking-denserank2.png)
 
 ```sql
