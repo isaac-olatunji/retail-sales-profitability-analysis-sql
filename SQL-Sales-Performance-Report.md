@@ -1,7 +1,9 @@
 # Retail Sales Performance and Profitability Analysis Using SQL
 
 **Analyst:** Isaac | isaactheanalyst
+
 **Tools:** SQL · Aggregate Functions · Window Functions · Subqueries
+
 **Dataset:** Sample Superstore — 9,994 transactions
 
 ---
