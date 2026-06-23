@@ -145,8 +145,8 @@ retail-sales-profitability-analysis-sql/
 │       └── dense-rank/
 │
 ├── Analysis Report/
-│   ├── SQL_Sales_Performance_Report.md
-│   └── SQL_Sales_Performance_Report.pdf
+│   ├── SQL_Sales-Performance-Report.md
+│   └── SQL-Sales-Performance-Report.pdf
 │
 └── Dataset/
     └── SampleSuperstore.csv
