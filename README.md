@@ -86,13 +86,13 @@ While the business appears healthy at a high level, profitability varies signifi
 ## Results Preview
 
 ### Overall Business Performance
-![Overall Business Performance](Assets/screenshots/overall-business-perfromance/overall-business-performance.png)
+![Overall Business Performance](Assets/screenshots/overall-business-performance/overall-business-performance.png)
 
 ### Category Performance
-![Category Performance](Assets/screenshots/category-perfromance/category-performance.png)
+![Category Performance](Assets/screenshots/category-performance/category-performance.png)
 
 ### Sub-Category Discount Analysis
-![Sub-Category Discount Analysis](Assets/screenshots/13_Subcategory_Discount_Analysis.png)
+![Sub-Category Discount Analysis](Assets/screenshots/subcategory-analysis/subcategory-discount-analysis.png)
 
 ### Texas Category Breakdown
 ![Texas Category Breakdown](Assets/screenshots/deep-dive-texas/texas-category-breakdown.png)
@@ -134,6 +134,15 @@ retail-sales-profitability-analysis-sql/
 ├── Assets/
 │   ├── cover.svg
 │   └── screenshots/
+│       ├── overall-business-performance/
+│       ├── category-performance/
+│       ├── segment-analysis/
+│       ├── regional-analysis/
+│       ├── subcategory-analysis/
+│       ├── discount-impact-analysis/
+│       ├── deep-dive-texas/
+│       ├── revenue-concentration-analysis/
+│       └── dense-rank/
 │
 ├── Analysis Report/
 │   ├── SQL_Sales_Performance_Report.md
@@ -147,7 +156,7 @@ retail-sales-profitability-analysis-sql/
 
 ## Project Assets
 
-Screenshots of SQL query outputs and analysis results are available in the **Assets/screenshots** folder.
+Screenshots of SQL query outputs and analysis results are organised by section in the **Assets/screenshots** folder.
 
 ---
 
