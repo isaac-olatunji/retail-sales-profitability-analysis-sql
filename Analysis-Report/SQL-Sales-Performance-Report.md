@@ -49,7 +49,7 @@ The analysis followed a structured SQL workflow:
 
 ## 1. Overall Business Performance
 
-![Overall Business Performance](Assets/screenshots/overall-business-performance/overall-business-performance.png)
+[!Overall Business Performance](../Assets/screenshots/overall-business-performance/overall-business-performance.png)
 
 | Metric | Value |
 | --- | ---: |
