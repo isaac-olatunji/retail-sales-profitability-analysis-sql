@@ -72,6 +72,7 @@ While the business appears healthy at a high level, profitability varies signifi
 | Technology Margin | 17.40% — highest-performing category |
 | Furniture Margin | 2.49% despite generating over $742K in sales |
 | Segment Efficiency | Home Office leads on margin (14.03%) despite being the smallest segment by revenue |
+| Regional Performance | West leads with 14.94% margin; Central is the weakest at 7.92% — Texas, Illinois, and Ohio all sit in Central |
 | Texas Performance | -$25.7K profit on $170K revenue; avg. 37% discount — a demand success and a pricing failure |
 | Loss State Pattern | 10 states are loss-making; Ohio, Pennsylvania, and Illinois alone destroy $45K+ — Colorado and Tennessee run deeply negative margins even on small revenue |
 | Discount Cliff | Margin turns negative above 20%; the 51–80% band operates at -119.20% margin, destroying $76.6K |
@@ -87,6 +88,9 @@ While the business appears healthy at a high level, profitability varies signifi
 
 ### Overall Business Performance
 ![Overall Business Performance](Assets/screenshots/overall-business-performance/overall-business-performance.png)
+
+### Regional Performance
+![Regional Analysis](Assets/screenshots/regional-analysis/regional-analysis.png)
 
 ### Category Performance
 ![Category Performance](Assets/screenshots/category-performance/category-performance.png)
@@ -132,7 +136,8 @@ retail-sales-profitability-analysis-sql/
 │   └── 07_Window_Functions.sql
 │
 ├── Assets/
-│   ├── cover.svg
+│   ├── sql-cover/
+│   │   └── cover.svg
 │   └── screenshots/
 │       ├── overall-business-performance/
 │       ├── category-performance/
@@ -145,8 +150,7 @@ retail-sales-profitability-analysis-sql/
 │       └── dense-rank/
 │
 ├── Analysis Report/
-│   ├── SQL-Sales-Performance-Report.md
-│ 
+│   └── SQL-Sales-Performance-Report.md
 │
 └── Dataset/
     └── SampleSuperstore.csv
