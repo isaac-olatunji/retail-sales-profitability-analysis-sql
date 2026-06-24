@@ -64,9 +64,9 @@ The analysis followed a structured SQL workflow:
 
 ## 2. Category Performance
 
-![Category Performance](Assets/screenshots/category-performance/category-performance.png)
+[!Category Performance](../Assets/screenshots/category-performance/category-performance.png)
 
-![Category Profit Margin](Assets/screenshots/category-performance/category-profit-margin.png)
+[!Category Profit Margin](../Assets/screenshots/category-performance/category-profit-margin.png)
 
 | Category | Avg Discount | Sales | Profit | Margin |
 | --- | ---: | ---: | ---: | ---: |
@@ -80,7 +80,7 @@ The analysis followed a structured SQL workflow:
 
 ## 3. Customer Segment Analysis
 
-![Customer Segment Analysis](Assets/screenshots/segment-analysis/customer-segment-analysis.png)
+[!Customer Segment Analysis](../Assets/screenshots/segment-analysis/customer-segment-analysis.png)
 
 | Segment | Sales | Profit | Margin |
 | --- | ---: | ---: | ---: |
@@ -94,9 +94,24 @@ The analysis followed a structured SQL workflow:
 
 ## 4. Regional & State Analysis
 
-![Top States By Sales](Assets/screenshots/regional-analysis/top-states-by-sales.png)
+### Regional Overview
 
-![State Profit Analysis](Assets/screenshots/regional-analysis/state-profit-analysis.png)
+[!Regional Analysis](../Assets/screenshots/regional-analysis/regional-analysis.png)
+
+| Region | Sales | Profit | Margin |
+| --- | ---: | ---: | ---: |
+| West | $725,458 | $108,418 | 14.94% |
+| East | $678,781 | $91,523 | 13.48% |
+| Central | $501,240 | $39,706 | 7.92% |
+| South | $391,722 | $46,749 | 11.94% |
+
+**Insight:** The West region leads on both revenue and profit and carries the strongest margin at 14.94%. The more telling finding is the South — the smallest region by revenue yet the second most profitable in absolute terms, and with a 11.94% margin that beats Central comfortably. Central is the underperformer: $501K in sales but only 7.92% margin, the lowest of any region. Given that Texas, Illinois, and Ohio — three of the deepest loss-making states — all sit in the Central region, the weak regional margin is not a coincidence. The Central discount problem visible at the state level is dragging down the entire region.
+
+---
+
+[!Top States By Sales](../Assets/screenshots/regional-analysis/top-states-by-sales.png)
+
+[!State Profit Analysis](../Assets/screenshots/regional-analysis/state-profit-analysis.png)
 
 ### Top Profit-Generating States
 
@@ -129,11 +144,11 @@ The analysis followed a structured SQL workflow:
 
 ## 5. Sub-Category Performance
 
-![Top Profit Sub-Categories](Assets/screenshots/subcategory-analysis/top-10-profit-subcategories.png)
+[!Top Profit Sub-Categories](../Assets/screenshots/subcategory-analysis/top-10-profit-subcategories.png)
 
-![Loss Making Sub-Categories](Assets/screenshots/subcategory-analysis/loss-making-subcategories.png)
+[!Loss Making Sub-Categories](../Assets/screenshots/subcategory-analysis/loss-making-subcategories.png)
 
-![Sub-Category Discount Analysis](Assets/screenshots/subcategory-analysis/subcategory-discount-analysis.png)
+[!Sub-Category Discount Analysis](../Assets/screenshots/subcategory-analysis/subcategory-discount-analysis.png)
 
 ### Complete Sub-Category View — Sorted by Avg Discount
 
@@ -169,7 +184,7 @@ The lower end of the table tells the opposite story. Accessories (8%, $41.9K), P
 
 ## 6. Discount Analysis
 
-![Discount Impact Analysis](Assets/screenshots/discount-impact-analysis/discount-impact-analysis.png)
+[!Discount Impact Analysis](../Assets/screenshots/discount-impact-analysis/discount-impact-analysis.png)
 
 ```sql
 SELECT
@@ -207,9 +222,9 @@ The Binders finding from Section 5 adds important nuance here: a 37% avg discoun
 
 Texas is the clearest example of discount-driven loss in the dataset.
 
-![Texas Category Breakdown](Assets/screenshots/deep-dive-texas/texas-category-breakdown.png)
+[!Texas Category Breakdown](../Assets/screenshots/deep-dive-texas/texas-category-breakdown.png)
 
-![Texas Discount Analysis](Assets/screenshots/deep-dive-texas/texas-discount-analysis.png)
+[!Texas Discount Analysis](../Assets/screenshots/deep-dive-texas/texas-discount-analysis.png)
 
 | Metric | Value |
 | --- | ---: |
@@ -237,11 +252,11 @@ Window functions were used throughout the analysis to provide ranked and cumulat
 
 ### Revenue Concentration Analysis
 
-![Revenue Concentration Analysis](Assets/screenshots/revenue-concentration-analysis/revenue-concentration-analysis.png)
+[!Revenue Concentration Analysis](../Assets/screenshots/revenue-concentration-analysis/revenue-concentration-analysis.png)
 
-![Revenue Concentration Analysis](Assets/screenshots/revenue-concentration-analysis/revenue-concentration-analysis2.png)
+[!Revenue Concentration Analysis](../Assets/screenshots/revenue-concentration-analysis/revenue-concentration-analysis2.png)
 
-![Revenue Concentration Analysis](Assets/screenshots/revenue-concentration-analysis/revenue-concentration-analysis3.png)
+[!Revenue Concentration Analysis](../Assets/screenshots/revenue-concentration-analysis/revenue-concentration-analysis3.png)
 
 ```sql
 SELECT
@@ -270,9 +285,9 @@ ORDER BY total_sales DESC;
 
 ### State Profit Ranking
 
-![State Profit Ranking](Assets/screenshots/dense-rank/state-profit-ranking-denserank.png)
+[!State Profit Ranking](../Assets/screenshots/dense-rank/state-profit-ranking-denserank.png)
 
-![State Profit Ranking](Assets/screenshots/dense-rank/state-profit-ranking-denserank2.png)
+[!State Profit Ranking](../Assets/screenshots/dense-rank/state-profit-ranking-denserank2.png)
 
 ```sql
 SELECT
@@ -310,11 +325,12 @@ Used to track cumulative revenue progression over time and identify periods of a
 | 2 | Furniture earns only 2.49% margin despite being the second-largest revenue category; its 17% avg. discount is the highest of any category |
 | 3 | Tables (26% avg discount, -$17.7K) and Bookcases (21%, -$3.5K) are loss-making due to discounting; Machines (31%, $3.4K profit) is one pricing decision from joining them; Supplies loses money at just 8% discount — a cost problem, not a discount problem |
 | 4 | Binders absorbs 37% avg discount and still returns $30.2K profit — the strongest evidence that pricing power, not discount level alone, determines profitability |
-| 5 | The top 5 states account for 52% of total revenue — California alone contributes 19.92% |
-| 6 | Texas generates $170K in revenue but loses $25.7K — a top-3 revenue market with a -15.1% profit margin, driven by 37% avg discount applied across products that cannot sustain it |
-| 7 | Discounts above 20% turn profitability negative; the 51–80% band operates at -119.20% margin, destroying $76.6K in profit alone |
-| 8 | Home Office is the most margin-efficient segment at 14.03% despite being the smallest by revenue |
-| 9 | Copiers generate $55.6K profit at 16% avg discount — the highest profit of any sub-category, without having the highest sales |
+| 5 | Central region has the weakest margin at 7.92% — Texas, Illinois, and Ohio all sit in Central, making it the discount loss epicentre |
+| 6 | The top 5 states account for 52% of total revenue — California alone contributes 19.92% |
+| 7 | Texas generates $170K in revenue but loses $25.7K — a top-3 revenue market with a -15.1% profit margin, driven by 37% avg discount applied across products that cannot sustain it |
+| 8 | Discounts above 20% turn profitability negative; the 51–80% band operates at -119.20% margin, destroying $76.6K in profit alone |
+| 9 | Home Office is the most margin-efficient segment at 14.03% despite being the smallest by revenue |
+| 10 | Copiers generate $55.6K profit at 16% avg discount — the highest profit of any sub-category, without having the highest sales |
 
 ---
 
