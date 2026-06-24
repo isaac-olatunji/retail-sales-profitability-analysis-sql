@@ -126,7 +126,7 @@ retail-sales-profitability-analysis-sql/
 │
 ├── README.md
 │
-├── SQL Scripts/
+├── SQL-Scripts/
 │   ├── 01_Data_Exploration.sql
 │   ├── 02_Business_Performance.sql
 │   ├── 03_Category_Analysis.sql
